@@ -1,0 +1,64 @@
+<head>
+<title>Style img</title>
+
+    <style>
+        img{
+           width: 120px;
+            height: 120px;
+            position: absolute;
+        }
+    
+    
+    </style>
+</head>
+
+<body onmousemove="move();" >
+
+    <img id="img1" src="download.jpg" draggable="false" onmousedown="d=true;"
+         onmouseup="d=false;"/>
+      <img id="img2" src="images1.jpg" draggable="false" onmousedown="d2=true;"
+         onmouseup="d2=false;"/>
+      <img id="img3" src="images2.jpg" draggable="false" onmousedown="d3=true;"
+         onmouseup="d3=false;"/>
+      <img id="img4" src="images3.jpg" draggable="false" onmousedown="d4=true;"
+         onmouseup="d4=false;"/>
+    
+    <img id="img5" src="صور-خلفيات-فواكه-1.jpg" draggable="false" onmousedown="d5=true;"
+         onmouseup="d5=false;"/>
+    
+<script>
+    
+    
+    var d =false;
+     var d2 =false;
+     var d3 =false;
+      var d4 =false;
+    var d5 =false;
+    
+    
+    function move(){
+        if(d){
+          fmove(window.img1);
+            
+        }else if(d2){
+            fmove(window.img2);
+            
+        }else if(d3){
+            fmove(window.img3);
+            
+        }else if(d4){
+            fmove(window.img4);
+            
+        }else if(d5){
+            fmove(window.img5);
+        }
+    }
+    
+    function fmove(tad){
+         tad.style.left = window.event.clientX-60;
+         tad.style.top = window.event.clientY-60;
+    }
+    
+    </script>
+
+</body>
